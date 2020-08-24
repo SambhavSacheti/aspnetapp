@@ -24,6 +24,10 @@
             <td>@(Environment.GetEnvironmentVariable("DOTNET_RUNNING_IN_CONTAINER") is object ? "true" : "false")</td>
         </tr>
         <tr>
+            <td>Operating System</td>
+            <td>@(Environment.GetEnvironmentVariable("OS") is object ? Environment.GetEnvironmentVariable("OS") : "N/A")</td>
+        </tr>
+        <tr>
             <td>CPU cores</td>
             <td>@Environment.ProcessorCount</td>
         </tr>
